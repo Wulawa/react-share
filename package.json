@@ -1,8 +1,8 @@
 {
-  "name": "react-share",
-  "version": "1.0.0",
+  "name": "social-share-react",
+  "version": "1.0.3",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./dist/react-share.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",

@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import QRcode from "qrcode.react"
-// import "../node_modules/social-share.js/dist/js/social-share.min.js"
-// import "../node_modules/social-share.js/src/js/social-share.js"
-// import "../node_modules/social-share.js/dist/css/share.min.css"
 import "./css/share.less"
 
 // Initialize a variables.
@@ -16,7 +13,7 @@ let origin = location.origin
 function getMetaContentByName(name) {
   return (document.getElementsByName(name)[0] || 0).content;
 }
-export class Share extends Component {
+class Share extends Component {
   static defaultProps = {
     url: url,
     origin: origin,
@@ -103,4 +100,4 @@ export class Share extends Component {
   }
 }
 
-export default Share
+export default Share;

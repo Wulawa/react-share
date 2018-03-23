@@ -4,7 +4,17 @@ module.exports = {
   entry: './libs/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'react-share.min.js'
+    filename: 'react-share.min.js',
+    library: 'react-share',
+    libraryTarget: 'umd'
+  },
+  externals: {
+    'react': {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
   },
   module: {
     rules: [{
