@@ -2,18 +2,27 @@
   "name": "react-share",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
   },
   "author": "lufeng",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react-app": "^3.1.1",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "prop-types": "^15.6.1",
+    "qrcode.react": "^0.8.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "social-share.js": "^1.0.16"
