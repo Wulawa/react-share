@@ -23,6 +23,7 @@ class Share extends Component {
     image: image,
     site: site,
     source: site,
+    initialized: false,
     sites: ["qzone", "weibo", "google", "twitter", "qq", "tencent", "wechat", "douban", "linkedin", "facebook"],
     wechatQrcodeSize: 150,
     wechatQrcodeLevel: 'Q'
@@ -77,7 +78,7 @@ class Share extends Component {
     return (
       <div className="social-share">
         {
-          initialized === 'true' ?
+          initialized?
           this.props.children :
           sites.map((site) => {
             if(site !== "wechat"){

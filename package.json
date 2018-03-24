@@ -1,14 +1,24 @@
 {
   "name": "social-share-react",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.5",
+  "description": "react social share",
   "main": "./dist/react-share.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "compile": "webpack --mode development  --config webpack.config.js"
   },
+  "keywords": [
+    "share",
+    "react",
+    "webpack v4",
+    "react-component"
+  ],
   "homepage": "https://github.com/Wulawa/react-share.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wulawa/react-share.git"
+  },
   "author": "lufeng",
   "license": "ISC",
   "dependencies": {
@@ -42,5 +52,6 @@
     "presets": [
       "env"
     ]
-  }
+  },
+  "readmeFilename": "README.md"
 }
