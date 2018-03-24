@@ -8,6 +8,7 @@
     "start": "parcel index.html",
     "compile": "webpack --mode development  --config webpack.config.js"
   },
+  "homepage": "https://github.com/Wulawa/react-share.git",
   "author": "lufeng",
   "license": "ISC",
   "dependencies": {
