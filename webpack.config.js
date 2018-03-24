@@ -6,15 +6,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'react-share.min.js',
     library: 'react-share',
-    libraryTarget: 'umd'
-  },
-  externals: {
-    'react': {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react'
-    }
+    libraryTarget: 'umd',
+    umdNamedDefine: true 
   },
   module: {
     rules: [{
@@ -24,7 +17,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['env'],
-            plugins: ["transform-class-properties"]            
+            plugins: ['transform-class-properties']            
           }
         }
       },
@@ -40,13 +33,13 @@ module.exports = {
         test: /\.less$/,
         use: [
           'style-loader',
-          "css-loader",
+          'css-loader',
           'less-loader',
           {
-            loader:"postcss-loader",
+            loader:'postcss-loader',
             options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
               plugins: (loader) => [
-                require("autoprefixer")(), //CSS浏览器兼容
+                require('autoprefixer')(), //CSS浏览器兼容
               ]
             }
           }
@@ -54,8 +47,11 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2|ttf|eot)$/,
-        loader: 'file-loader'
-      },
+        loader: 'url-loader',
+        options: {  
+          limit: '11240'
+        }
+      }
     ]
   },
   resolve: {
