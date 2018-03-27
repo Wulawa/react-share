@@ -1,6 +1,6 @@
 {
   "name": "social-share-react",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "react social share",
   "main": "./dist/react-share.min.js",
   "scripts": {

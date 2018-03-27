@@ -19,6 +19,7 @@ class Share extends Component {
     origin: origin,
     title: title,
     description: description,
+    disabled: [],
     summary: description,
     image: image,
     site: site,
@@ -39,7 +40,7 @@ class Share extends Component {
     disabled: PropTypes.array,
     wechatQrcodeTitle: PropTypes.string,
     wechatQrcodeHelper:  PropTypes.string,
-    initialized: PropTypes.string,
+    initialized: PropTypes.bool,
     wechatQrcodeLevel: PropTypes.string,
     wechatQrcodeSize: PropTypes.number,
   }
@@ -60,7 +61,7 @@ class Share extends Component {
   }
   render() {
     // const setData = this.getDataFormat();
-    const {url, sites, title, image, description, summary, source, wechatQrcodeSize, wechatQrcodeLevel,initialized} = this.getDataFormat();
+    const {url, sites, disabled, title, image, description, summary, source, wechatQrcodeSize, wechatQrcodeLevel,initialized} = this.getDataFormat();
 
     const templates = {
       qzone: `http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${url}&title=${title}&desc=${description}&summary=${summary}&site=${source}`,
@@ -81,6 +82,7 @@ class Share extends Component {
           initialized?
           this.props.children :
           sites.map((site) => {
+            if(~disabled.indexOf(site)) return;
             if(site !== "wechat"){
               return (
                 <a key={site} className={`social-share-icon icon-${site}`} target='_blank' href={templates[site]}></a>

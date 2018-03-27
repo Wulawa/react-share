@@ -9,6 +9,14 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true 
   },
+  externals: [{
+    'react': {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
+  }],
   module: {
     rules: [{
         test: /\.js$/,
