@@ -1,5 +1,5 @@
 const path = require('path');
-// const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry: './libs/index.js',
   output: {
@@ -63,12 +63,6 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      components: path.resolve(__dirname, 'src/components/'),
-      containers: path.resolve(__dirname, 'src/containers/'),
-      static: path.resolve(__dirname, 'src/static/'),
-      theme: path.resolve(__dirname, 'src/theme/'),
-    },
     extensions: [
       '.js',
       '.jsx'
@@ -78,10 +72,4 @@ module.exports = {
       path.resolve(__dirname, 'node_modules/'),
     ]
   },
-  //   plugins: [
-  //     new HtmlWebPackPlugin({
-  //       template: path.resolve(__dirname, 'src/index.html'),
-  //       filename: "./index.html"
-  //     })
-  //   ]
 };

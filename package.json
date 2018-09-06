@@ -1,12 +1,12 @@
 {
   "name": "social-share-react",
-  "version": "1.0.8",
+  "version": "1.1.1",
   "description": "react social share",
   "main": "./dist/react-share.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "compile": "webpack --mode development  --config webpack.config.js"
+    "compile": "webpack --mode production  --config webpack.config.js"
   },
   "keywords": [
     "share",
