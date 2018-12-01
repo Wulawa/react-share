@@ -68,7 +68,7 @@ class Share extends Component {
       qq: `http://connect.qq.com/widget/shareqq/index.html?url=${url}&title=${title}&source=${source}&desc=${description}`,
       tencent: `http://share.v.t.qq.com/index.php?c=share&a=index&title=${title}&url=${url}&pic=${image}`,
       weibo: `http://service.weibo.com/share/share.php?url=${url}&title=${title}&pic=${image}`,
-      wechat: `javascript:`,
+      wechat: decodeURIComponent(url),
       douban: `http://shuo.douban.com/!service/share?href=${url}&name=${title}&text=${description}&image=${image}&starid=0&aid=0&style=11`,
       diandian: `http://www.diandian.com/share?lo=${url}&ti=${title}&type=link`,
       linkedin: `http://www.linkedin.com/shareArticle?mini=true&ro=true&title=${title}&url=${url}&summary=${summary}&source=${source}&armin=armin`,
@@ -89,10 +89,10 @@ class Share extends Component {
               )
             } else {
               return (
-              <a key={site} className={`social-share-icon icon-${site}`} target='_blank' href={templates[site]}>
+              <a key={site} className={`social-share-icon icon-${site}`} target='_blank' href='javascript:;'>
                 <div className="wechat-qrcode">
                   <h4>微信扫一扫：分享</h4>
-                  <QRcode value={url} size={wechatQrcodeSize} level={wechatQrcodeLevel}/>
+                  <QRcode value={templates[site]} size={wechatQrcodeSize} level={wechatQrcodeLevel}/>
                 </div>  
               </a>)
             }
