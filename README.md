@@ -28,7 +28,7 @@ import Share from 'social-share-react'
 ...
 <Share
   url='https://www.baidu.com'
-  title='分享生活点滴',
+  title='分享生活点滴'
   disabled={['google', 'facebook', 'twitter']}
 ></Share>
 ...
