@@ -1,0 +1,48 @@
+{
+  "name": "social-share-react",
+  "version": "1.0.0",
+  "description": " share  ui component for react",
+  "main": "index.js",
+  "repository": "https://github.com/Wulawa/react-share.git",
+  "author": "lufeng",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "babel-jest": "^24.9.0",
+    "prop-types": "^15.7.2",
+    "qrcode.react": "^1.0.0",
+    "react-lifecycles-compat": "^3.0.4",
+    "ts-jest": "^24.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/cli": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@types/jest": "^24.0.23",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.2",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
+    "postcss-loader": "^3.0.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "style-loader": "^1.0.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "webpack --mode production  --config webpack.config.js",
+    "test": "jest"
+  }
+}

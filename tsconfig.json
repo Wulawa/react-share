@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": false,
+    "rootDirs": ["libs", "stories"],
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["dom", "es2017"],
+    "jsx": "react", // "react"就是对jsx的支持，不需要用babel-preset-react进行转码
+  },
+}
