@@ -14,6 +14,9 @@ function getMetaContentByName(name) {
   return (document.getElementsByName(name)[0] || 0).content;
 }
 class Share extends Component {
+  constructor(props) {
+    super(props);
+  }
   static defaultProps = {
     url: url,
     origin: origin,
