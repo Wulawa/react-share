@@ -2,7 +2,7 @@
   "name": "social-share-react",
   "version": "1.0.0",
   "description": " share  ui component for react",
-  "main": "index.js",
+  "main": "./dist/react-share.min.js",
   "repository": "https://github.com/Wulawa/react-share.git",
   "author": "lufeng",
   "license": "MIT",

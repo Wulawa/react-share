@@ -1,12 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: './libs/index.js',
+  entry: './libs/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'react-share.min.js',
     library: 'react-share',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
     umdNamedDefine: true 
   },
   externals: [{
@@ -30,17 +30,17 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env'],
-            plugins: ['@babel/plugin-proposal-class-properties']            
-          }
-        }
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/env'],
+      //       plugins: ['@babel/plugin-proposal-class-properties']            
+      //     }
+      //   }
+      // },
       {
         test: /\.css$/,
         use: [

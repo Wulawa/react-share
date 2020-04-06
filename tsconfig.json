@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "baseUrl": "libs",
     "sourceMap": false,
     "rootDirs": ["libs", "stories"],
     "noImplicitAny": true,
